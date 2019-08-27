@@ -26,6 +26,10 @@ import objetos.Dado;
 import objetos.Figura;
 import objetos.Libreta;
 import objetos.Pintura;
+import poo.SerVivo;
+import poo.Animal;
+import poo.Gato;
+import poo.Huron;
 //import poo.Alumno_;
 //import poo.Memoria;
 /**
