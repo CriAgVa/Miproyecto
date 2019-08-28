@@ -11,42 +11,37 @@ package poo;
  */
 public class Alumno_ extends Persona {
     
-    private String nombre;
     private int boleta;
     private boolean regular;
-    private boolean promedioGral;
+    private double promedioGral;
     private String carrera;
 
     public Alumno_() {
-        super.setNombre(nombre);
+        
         //this.nombre = "Desconocido";
         this.boleta = 0;
         this.regular = false;
-        this.promedioGral = false;
+        this.promedioGral = 0;
         this.carrera = "Desconocido";
     }
 
-    public Alumno_(String nombre, int boleta, boolean regular, boolean promedioGral, String carrera) {
-        this.nombre = nombre;
+    public Alumno_(String nombre, int edad, double estatura, double peso, String sexo, 
+            int boleta, boolean regular, double promedioGral, String carrera) {
+        
+        super(nombre, edad, estatura, peso, sexo);
         this.boleta = boleta;
         this.regular = regular;
         this.promedioGral = promedioGral;
         this.carrera = carrera;
     }
 
+    public Alumno_(Alumno_ alumno){
+        this(alumno.getNombre(),alumno.getEdad(),alumno.getEstatura(),alumno.getPeso(),alumno.getSexo(),
+                alumno.getBoleta(),alumno.isRegular(),alumno.getPromedioGral(),alumno.getCarrera());
+    }
     /**
      * @return the nombre
      */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     /**
      * @return the boleta
@@ -79,14 +74,14 @@ public class Alumno_ extends Persona {
     /**
      * @return the promedioGral
      */
-    public boolean isPromedioGral() {
+    public double getPromedioGral() {
         return promedioGral;
     }
 
     /**
      * @param promedioGral the promedioGral to set
      */
-    public void setPromedioGral(boolean promedioGral) {
+    public void setPromedioGral(double promedioGral) {
         this.promedioGral = promedioGral;
     }
 
@@ -102,5 +97,16 @@ public class Alumno_ extends Persona {
      */
     public void setCarrera(String carrera) {
         this.carrera = carrera;
+    }
+
+    @Override
+    public void saludar() {
+        System.out.println("Y soy alumno.");//To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public String toString(){
+       String mensaje="El alumno se llama "+super.getNombre()+" de la carrera "+carrera+" con boleta "+boleta+" y promedio "+promedioGral;
+       return mensaje;
     }
 }

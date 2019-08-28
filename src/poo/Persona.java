@@ -38,7 +38,7 @@ public class Persona {//las llaves definen el contexto
     }
     
     public void saludar() {
-        System.out.println("Hola Mundo");
+        System.out.println("Hola, mi nombre es "+this.nombre);
     }
     
     public void setNombre(String nombre){
@@ -101,5 +101,15 @@ public class Persona {//las llaves definen el contexto
         this.sexo = sexo;
     }
     
+    @Override
+    public int hashCode(){
+        return nombre.hashCode();
+    }
     
+    @Override
+    public boolean equals(Object obj){
+        Persona p1=(Persona)obj;
+        
+        return p1.getNombre().equals(this.getNombre());
+    }
 }

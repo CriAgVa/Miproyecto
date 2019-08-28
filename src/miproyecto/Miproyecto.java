@@ -30,6 +30,7 @@ import poo.SerVivo;
 import poo.Animal;
 import poo.Gato;
 import poo.Huron;
+import poo.Alumno_;
 //import poo.Alumno_;
 //import poo.Memoria;
 /**
@@ -45,9 +46,6 @@ public class Miproyecto {
         // TODO code application logic here
         int x=6;
         Persona beto = new Persona("Juan Alberto", 18, 1.87, 67.5, "Indefinido");
-        System.out.println(beto.getNombre());
-        beto.setNombre("Juan Martin");
-        System.out.println(beto.getNombre());
         
         Perro can = new Perro("can", "negro", "Chihuahua", 23.5); 
         Celular iphone = new Celular ("Apple", 17999, "IPhone 8s");
@@ -69,5 +67,24 @@ public class Miproyecto {
         Figura fig = new Figura (3, 5.4, 2.8);
         Libreta note = new Libreta ("Raya profesional", 100, "Scribe");
         Pintura paint = new Pintura ("Vincent Van Gogh", "De sterrennacht", "Oleo sobre lienzo");
+        
+        Alumno_ roberto = new Alumno_("Beto", 24, 54, 62, "M", 20, true, 15, "Artes");
+        
+        
+        beto.saludar();
+        roberto.saludar();
+        
+        Persona p1 = new Persona("Pedro", 18, 180.5, 88.6, "Masculino");
+        Persona p2 = new Persona("Jose", 19, 165.4, 45.2, "Masculino");
+        Persona p3 = new Persona("Pedro", 15, 177, 5.3, "Masculino");
+        
+        System.out.println(p1.equals(p2));
+        System.out.println(p1.equals(p3));
+        
+        Alumno_ a1 = new Alumno_("Victor Hernandez", 20, 179.5, 81.6, "Masculino", 131313, true, 8.3, 
+                "Fisica");
+        
+        System.out.println(a1.toString());
+        
     }
 }
