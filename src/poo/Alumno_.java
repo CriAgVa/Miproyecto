@@ -17,7 +17,6 @@ public class Alumno_ extends Persona {
     private String carrera;
 
     public Alumno_() {
-        
         //this.nombre = "Desconocido";
         this.boleta = 0;
         this.regular = false;
@@ -109,4 +108,5 @@ public class Alumno_ extends Persona {
        String mensaje="El alumno se llama "+super.getNombre()+" de la carrera "+carrera+" con boleta "+boleta+" y promedio "+promedioGral;
        return mensaje;
     }
+    
 }
