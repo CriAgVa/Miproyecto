@@ -6,6 +6,7 @@
 package calculadora;
 
 import calculadora.JButtonC;
+import calculadora.Calculadora;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,22 +16,22 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import calculadora.ListenerCyan;
 import java.awt.event.ActionEvent;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author chris
  */
-public class JFrameCalculadora extends JFrame {
+public class JFrameCalculadora extends JFrame{
 
     public JFrameCalculadora() {
         inicializarCompontentes();
     }
 
     private void inicializarCompontentes() {
-        
-        //crear grid central y botones
         JPanel panelCentral= new JPanel(new GridLayout(5, 4));
         Dimension dim = new Dimension(30, 30);
         JButtonC btnC = new JButtonC("C", dim, Color.red);
@@ -77,7 +78,6 @@ public class JFrameCalculadora extends JFrame {
         setLayout(new BorderLayout());
         add(panelCentral, BorderLayout.CENTER);
         
-        //crear display 
         JTextField display = new JTextField();
         Font auxF = display.getFont();
         Font nueva = new Font(auxF.getName(), auxF.getStyle(), 60);
@@ -90,8 +90,27 @@ public class JFrameCalculadora extends JFrame {
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        ListenerCyan listC = new ListenerCyan();
+        ListenerCyan listC = new ListenerCyan(display);
+        ListenerRM listRM = new ListenerRM(display);
         btn0.addActionListener(listC);
         btn1.addActionListener(listC);
+        btn2.addActionListener(listC);
+        btn3.addActionListener(listC);
+        btn4.addActionListener(listC);
+        btn5.addActionListener(listC);
+        btn6.addActionListener(listC);
+        btn7.addActionListener(listC);
+        btn8.addActionListener(listC);
+        btn9.addActionListener(listC);
+        btnC.addActionListener(listRM);
+        btnCE.addActionListener(listRM);
+        btnMM.addActionListener(listRM);
+        btnMas.addActionListener(listRM);
+        btnMen.addActionListener(listRM);
+        btnX.addActionListener(listRM);
+        btnDiv.addActionListener(listRM);
+        btnDot.addActionListener(listRM);
+        btnEqs.addActionListener(listRM);
+        btnAcerca.addActionListener(listRM);
     }
 }
