@@ -17,6 +17,7 @@ public class Miproyecto {
     public static void main(String[] args) {
        JFrameT ventana = new JFrameT();
        ventana.setVisible(true);
+       //2
     }
     
     
