@@ -70,6 +70,10 @@ public class Huron extends Animal{
         this.color = color;
     }
     
-    
+    @Override
+    public String toString(){
+       String mensaje="El huron se llama "+nombre+", es de raza "+raza+" y de colorr "+color;
+       return mensaje;
+    }
 }
 

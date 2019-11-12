@@ -70,5 +70,9 @@ public class Gato extends Animal{
         this.color = color;
     }
     
-    
+    @Override
+    public String toString(){
+       String mensaje=super.toString()+"El gato se llama "+nombre+", es de raza "+raza+" y de color "+color;
+       return mensaje;
+    }
 }

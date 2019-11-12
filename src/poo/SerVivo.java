@@ -70,5 +70,9 @@ public class SerVivo {
         this.respiracion = respiracion;
     }
     
-    
+    @Override
+    public String toString(){
+       String mensaje="El ser vivo es del reino "+reino+", tiene una estructura osea "+estructuraOsea+" y una respiracion "+respiracion;
+       return mensaje;
+    }
 }

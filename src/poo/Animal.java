@@ -68,4 +68,10 @@ public class Animal extends SerVivo{
     public void setAlimentacion(String alimentacion) {
         this.alimentacion = alimentacion;
     }
+    
+    @Override
+    public String toString(){
+       String mensaje=super.toString()+"El animal es de la familia "+familia+", de la clase "+clase+" y tiene una alimentaciion "+alimentacion;
+       return mensaje;
+    }
 }

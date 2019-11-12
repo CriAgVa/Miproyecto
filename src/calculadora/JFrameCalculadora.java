@@ -72,7 +72,7 @@ public class JFrameCalculadora extends JFrame{
         panelCentral.add(btnDot);
         JButtonC btnEqs = new JButtonC("=", dim, Color.magenta);
         panelCentral.add(btnEqs);
-        JButtonC btnAcerca = new JButtonC("?", dim, Color.magenta);
+        JButtonC btnAcerca = new JButtonC("?", dim, Color.darkGray);
         panelCentral.add(btnAcerca);
         
         setLayout(new BorderLayout());

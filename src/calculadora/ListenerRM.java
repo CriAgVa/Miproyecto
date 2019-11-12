@@ -40,11 +40,9 @@ public class ListenerRM implements ActionListener{
                     break;
                 case "+/-":
                     if(display.getText().contains("-")==true){
-                        signo="+";
                         display.setText(display.getText().substring(1, display.getText().length()));
                     }
                     else{
-                        signo="-";
                         display.setText("-"+display.getText());
                     }
                     break;
@@ -95,6 +93,7 @@ public class ListenerRM implements ActionListener{
                 break;
             case "/":
                 resultado=elemento/Double.parseDouble(display.getText());
+                resultado=Math.round(resultado*100)/100d;
                 break;
             case "*":
                 resultado=elemento*Double.parseDouble(display.getText());

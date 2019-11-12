@@ -6,8 +6,7 @@ package miproyecto;
  * and open the template in the editor.
  */
 
-import calculadora.Calculadora;
-import calculadora.JFrameCalculadora;
+import teclado.JFrameT;
 
 /*package miproyecto;
 /**
@@ -15,12 +14,10 @@ import calculadora.JFrameCalculadora;
  * @author Cri
  */
 public class Miproyecto {
-    
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-       JFrameCalculadora calc = new JFrameCalculadora();
-       calc.setVisible(true);
+       JFrameT ventana = new JFrameT();
+       ventana.setVisible(true);
     }
+    
+    
 }   
